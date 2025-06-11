@@ -262,3 +262,20 @@ body {
     font-size: 1.2rem;
   }
 }
+/* Mostrar u ocultar el botón hamburguesa según tamaño */
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--light);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}

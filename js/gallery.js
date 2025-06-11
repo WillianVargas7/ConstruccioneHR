@@ -60,7 +60,3 @@ document.addEventListener('DOMContentLoaded', () => {
     updateMainImage(galleryId, gallery.currentIndex + direction);
   }
 });
-// script.js (al final)
-document.querySelector('.navbar-toggle')?.addEventListener('click', () => {
-  document.querySelector('.navbar')?.classList.toggle('active');
-});
