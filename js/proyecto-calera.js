@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const etapas = {
     chimeneas: 4,
-    pintura: 12,
-    tejado: 10,
+    pintura: 19,
+    tejado: 1,
   };
 
   Object.entries(etapas).forEach(([etapa, total]) => {
