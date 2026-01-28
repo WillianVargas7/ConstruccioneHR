@@ -7,3 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// Agrega efecto sticky al header al hacer scroll
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.main-header');
+  if (window.scrollY > 50) {
+    header.classList.add('fixed');
+  } else {
+    header.classList.remove('fixed');
+  }
+});

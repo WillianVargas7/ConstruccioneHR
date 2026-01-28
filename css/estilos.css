@@ -1,5 +1,6 @@
-/* styles.css */
-
+/* =====================================================
+   VARIABLES
+===================================================== */
 :root {
   --primary-color: #027C82;
   --accent-color: #ffcc00;
@@ -9,15 +10,18 @@
   --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* =====================================================
+   BASE
+===================================================== */
 body {
   margin: 0;
   font-family: var(--font);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-              url('/img/Torre-grua1.jpg') no-repeat center center fixed;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/img/Torre-grua1.jpg') no-repeat center center fixed;
   background-size: cover;
   color: var(--light);
   line-height: 1.6;
-
 }
 
 .container {
@@ -26,14 +30,16 @@ body {
   margin: auto;
 }
 
-/* Header */
+/* =====================================================
+   HEADER
+===================================================== */
 .main-header {
   position: absolute;
   top: 0;
   width: 100%;
+  padding: 1rem 0;
   background-color: transparent;
   color: var(--light);
-  padding: 1rem 0;
   z-index: 1000;
 }
 
@@ -43,11 +49,13 @@ body {
   justify-content: space-between;
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
+
 .logo:hover {
   transform: scale(1.05);
   opacity: 0.9;
@@ -62,7 +70,9 @@ body {
   font-weight: bold;
 }
 
-/* Estilos base del navbar */
+/* =====================================================
+   NAVBAR
+===================================================== */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -73,25 +83,36 @@ body {
 
 .navbar li a {
   text-decoration: none;
-  color: var(--gray);   
+  color: var(--gray);
   font-family: var(--font);
   padding: 10px 20px;
   border-radius: 12px;
-  transition: all 0.3s ease;
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
-/* Efecto al pasar el mouse */
 .navbar li a:hover {
   background-color: #f0f0f0;
+  color: var(--primary-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  color: var(--primary-color);   
 }
 
-/* Hero */
+/* Botón hamburguesa */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--light);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
 .hero {
   height: 100vh;
-  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -107,19 +128,26 @@ body {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
 
-.btn-primary, .btn-secondary {
+/* =====================================================
+   BOTONES
+===================================================== */
+.btn-primary,
+.btn-secondary {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
   border: none;
-  background-color: var(--accent-color);
-  color: var(--dark);
-  font-weight: bold;
   border-radius: 10px;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--dark);
 }
 
 .btn-primary:hover {
@@ -131,14 +159,16 @@ body {
   color: var(--light);
 }
 
-/* Main Sections */
+/* =====================================================
+   CONTENIDO
+===================================================== */
 .main-content .card {
   background-color: rgba(255, 255, 255, 0.9);
   color: #000;
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .services-grid {
@@ -154,7 +184,7 @@ body {
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
@@ -170,18 +200,40 @@ body {
   transform: translateY(-5px);
 }
 
-/* Contact */
-.whatsapp{
-  display: block;
-  width: auto;
-  height: 50px;
-  
+/* ===============================
+   VIDEO - QUIÉNES SOMOS
+================================ */
+.video-wrapper {
+  margin: 2rem auto 0;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
 }
-.whatsapp img{
+
+.video-wrapper iframe,
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* =====================================================
+   CONTACTO
+===================================================== */
+.whatsapp {
+  display: block;
+  height: 50px;
+}
+
+.whatsapp img {
   height: 100%;
 }
 
-/* Footer */
+/* =====================================================
+   FOOTER
+===================================================== */
 .main-footer {
   text-align: center;
   background-color: var(--dark);
@@ -190,7 +242,47 @@ body {
   font-size: 0.9rem;
 }
 
-/* ─── Responsive Tablets (<=1024px) ─── */
+/* =====================================================
+   STICKY HEADER
+===================================================== */
+.main-header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.4rem 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.main-header.fixed .header-container {
+  align-items: center;
+}
+
+.main-header.fixed .logo {
+  gap: 0.8rem;
+}
+
+.main-header.fixed .logo img {
+  height: 38px;
+}
+
+.main-header.fixed .brand-name {
+  font-size: 1.15rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.main-header.fixed .navbar li a {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
 @media (max-width: 1024px) {
   .header-container {
     flex-direction: column;
@@ -205,20 +297,22 @@ body {
     font-size: 2.5rem;
   }
 
-  .btn-primary, .btn-secondary {
+  .btn-primary,
+  .btn-secondary {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
-
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
 }
 
-/* ─── Responsive Móviles (<=768px) ─── */
+/* =====================================================
+   RESPONSIVE MÓVIL
+===================================================== */
 @media (max-width: 768px) {
-  /* Header: hamburguesa */
+
+  .navbar-toggle {
+    display: block;
+  }
+
   .navbar ul {
     display: none;
     flex-direction: column;
@@ -227,55 +321,45 @@ body {
     text-align: center;
     margin-top: 1rem;
   }
-  .navbar.active ul { display: flex; }
 
-  /* Hero */
-  .hero h1 {
-    font-size: 2rem;
+  .navbar.active ul {
+    display: flex;
   }
+
   .hero {
     padding: 1.5rem;
   }
 
-  /* Botones */
-  .btn-primary, .btn-secondary {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
     box-sizing: border-box;
   }
 
-  /* Secciones */
   .main-content .card {
     padding: 1.5rem;
     margin: 1.5rem 0;
   }
 
-  /* Grid de servicios a 1 columna */
   .services-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Ajuste logo y marca */
   .logo img {
     height: 40px;
   }
+
   .brand-name {
     font-size: 1.2rem;
   }
-}
-/* Mostrar u ocultar el botón hamburguesa según tamaño */
 
-.navbar-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--light);
-  cursor: pointer;
-  z-index: 1001;
-}
-
-@media (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
+  .main-header.fixed .header-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center; 
   }
 }
