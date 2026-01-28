@@ -305,13 +305,50 @@ body {
 }
 
 /* =====================================================
-   RESPONSIVE MÓVIL
+   RESPONSIVE MÓVIL (<=768px)
 ===================================================== */
 @media (max-width: 768px) {
 
+  /* ---------- HEADER ---------- */
+
+  /* Layout base del header (antes del scroll) */
+  .main-header .header-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  /* Botón hamburguesa */
   .navbar-toggle {
     display: block;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: var(--light);
+    cursor: pointer;
   }
+
+  /* Logo y nombre */
+  .logo {
+    gap: 0.5rem;
+  }
+
+  .logo img {
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+
+  /* Header sticky */
+  .main-header.fixed .header-container {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  /* ---------- MENÚ ---------- */
 
   .navbar ul {
     display: none;
@@ -326,6 +363,8 @@ body {
     display: flex;
   }
 
+  /* ---------- HERO ---------- */
+
   .hero {
     padding: 1.5rem;
   }
@@ -334,11 +373,15 @@ body {
     font-size: 2rem;
   }
 
+  /* ---------- BOTONES ---------- */
+
   .btn-primary,
   .btn-secondary {
     width: 100%;
     box-sizing: border-box;
   }
+
+  /* ---------- CONTENIDO ---------- */
 
   .main-content .card {
     padding: 1.5rem;
@@ -347,19 +390,5 @@ body {
 
   .services-grid {
     grid-template-columns: 1fr;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-
-  .brand-name {
-    font-size: 1.2rem;
-  }
-
-  .main-header.fixed .header-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center; 
   }
 }
