@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const etapas = {
-    estructura: 2,
-    obra: 11,
+    estructura: 28,
+    obra: 39,
     acabados: 21,
     entrega: 2
   };
