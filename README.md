@@ -33,8 +33,6 @@ Fue desarrollada con enfoque en rendimiento, experiencia de usuario y adaptabili
 
 ### 🖥️ Versión Web
 
-## 🖥️ Versión Web
-
 <p align="center">
   <img src="img/README-imagenes/Inicio-Web.jpeg" width="600"/>
   <img src="img/README-imagenes/Quienes_Somos-Web.jpeg" width="600"/>
@@ -44,11 +42,16 @@ Fue desarrollada con enfoque en rendimiento, experiencia de usuario y adaptabili
 
 ### 📱 Versión Móvil
 
-![Menú Móvil](img/README-imagenes/Menú-Movil.jpeg)  
-![Principal Móvil](img/README-imagenes/Principal-Movil.jpeg)  
-![Servicios Móvil](img/README-imagenes/Servicios-Movil.jpeg)  
-![Contacto Móvil](img/README-imagenes/Contacto-Movil.jpeg)  
-![Quienes Somos Móvil](img/README-imagenes/Quienes_Somos-Movil.jpeg)
+<p align="center">
+  <img src="img/README-imagenes/Menu-Movil.jpeg" width="200"/>
+  <img src="img/README-imagenes/Principal-Movil-5.jpeg" width="200"/>
+  <img src="img/README-imagenes/Servicios-Movil.jpeg" width="200"/>
+</p>
+
+<p align="center">
+  <img src="img/README-imagenes/Contacto-Movil-4.jpeg" width="200"/>
+  <img src="img/README-imagenes/Quienes_Somos-Movil.jpeg" width="200"/>
+</p>
 
 ---
 
