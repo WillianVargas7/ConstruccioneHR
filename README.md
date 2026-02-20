@@ -44,12 +44,12 @@ Fue desarrollada con enfoque en rendimiento, experiencia de usuario y adaptabili
 
 <p align="center">
   <img src="img/README-imagenes/Menu-Movil.jpeg" width="200"/>
-  <img src="img/README-imagenes/Principal-Movil-5.jpeg" width="200"/>
+  <img src="img/README-imagenes/Principal-Movil.jpeg" width="200"/>
   <img src="img/README-imagenes/Servicios-Movil.jpeg" width="200"/>
 </p>
 
 <p align="center">
-  <img src="img/README-imagenes/Contacto-Movil-4.jpeg" width="200"/>
+  <img src="img/README-imagenes/Contacto-Movil.jpeg" width="200"/>
   <img src="img/README-imagenes/Quienes_Somos-Movil.jpeg" width="200"/>
 </p>
 
