@@ -33,7 +33,11 @@ Fue desarrollada con enfoque en rendimiento, experiencia de usuario y adaptabili
 
 ### 🖥️ Versión Web
 
-![Inicio Web](img/README-imagenes/Inicio-Web.jpeg)  
+## 🖥️ Versión Web
+
+<p align="center">
+  <img src="img/README-imagenes/Inicio-Web.jpeg" width="600"/>
+</p> 
 ![Quienes Somos Web](img/README-imagenes/Quienes_Somos-Web.jpeg)
 
 ---
