@@ -7,10 +7,23 @@
   <link rel="stylesheet" href="/css/proyectos-galerias.css" />
   <link rel="stylesheet" href="/css/estilos.css" />
   <script defer src="/js/script.js"></script>
-  <script defer src="/js/proyecto-calera.js"></script>
+  <script>
+  const GALERIA = {
+      basePath: "/img/calera",
+      extension: "jpg",
+      etapas: {
+          tejado: 74,
+          pintura: 19,
+          chimeneas: 4
+      }
+  };
+  </script>
+  <script defer src="/js/galerias.js"></script>
 </head>
+
 <body>
   <header class="main-header">
+
     <div class="container header-container">
 
       <button class="navbar-toggle" aria-label="Abrir menú">

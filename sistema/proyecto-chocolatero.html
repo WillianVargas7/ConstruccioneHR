@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +8,23 @@
   <link rel="stylesheet" href="/css/proyectos-galerias.css" />
   <link rel="stylesheet" href="/css/estilos.css" />
   <script defer src="/js/script.js"></script>
-  <script defer src="/js/proyecto-chocolatero.js"></script>
+  <script>
+    const GALERIA = {
+        basePath: "/img/chocolatero",
+        extension: "jpg",
+        etapas: {
+            estructura: 28,
+            obra: 39,
+            acabados: 21,
+            entrega: 2
+        }
+    };
+  </script>
+  <script defer src="/js/galerias.js"></script>
 </head>
+
 <body>
+
   <header class="main-header">
     <div class="container header-container">
 
@@ -34,13 +49,6 @@
 
   <main class="container container-galeria">
     <h1 class="page-title">Proyecto El Chocolatero</h1>
-
-    <!-- Secciones dinámicas por etapa serán insertadas aquí por JS -->
-    <!-- <section class="galeria-etapa">
-      <h2>Cimentación</h2>
-      <div class="gallery-viewer" data-gallery="cimentacion"></div>
-      <div class="thumbnails" data-gallery="cimentacion"></div>
-    </section> -->
 
     <section class="galeria-etapa">
       <h2>Estructura</h2>
