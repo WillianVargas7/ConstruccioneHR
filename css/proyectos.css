@@ -1,165 +1,135 @@
-h1 {
-  padding-top: 100px;
+/* ===========================
+   PÁGINA PROYECTOS
+===========================*/
+
+.proyectos-page{
+
+    padding:120px 0 70px;
+
 }
 
-/* -------------------Galería de Proyectos------------------- */
+.hero-proyectos{
 
-.gallery-card {
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align:center;
+    margin-bottom:60px;
+
 }
 
-.page-title {
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 2rem;
-  color: var(--dark);
+.hero-proyectos h1{
+
+    font-size:3rem;
+    color:var(--light);
+    margin-bottom:20px;
+
 }
 
-.gallery-viewer {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 1rem auto;
-  overflow: hidden;
-  border-radius: 12px;
+.hero-proyectos p{
+
+    max-width:800px;
+    margin:auto;
+    font-size:1.1rem;
+    line-height:1.8;
+    color:var(--light);
+
 }
 
-.gallery-current {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
+/*========================*/
+
+.contenedor-proyectos{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(360px,1fr));
+    gap:40px;
 }
 
-.gallery-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 10;
+/*========================*/
+
+.tarjeta-proyecto{
+    text-decoration:none;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:
+    0 8px 18px rgba(0,0,0,.08);
 }
 
-.gallery-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+/* Hover */
+
+.tarjeta-proyecto:hover{
+
+    transform:scale(1.03);
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
 }
 
-.gallery-arrow.prev {
-  left: 10px;
+/*========================*/
+
+.imagen{
+    position:relative;
+    overflow:hidden;
 }
 
-.gallery-arrow.next {
-  right: 10px;
+.imagen img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:.4s;
 }
 
-.thumbnails {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  padding-bottom: 0.5rem;
-  -webkit-overflow-scrolling: touch;
+.tarjeta-proyecto:hover img{
+    transform:scale(1.08);
 }
 
-.thumbnails .thumb {
-  display: inline-block;
-  width: 60px;
-  height: 45px;
-  object-fit: cover;
-  border-radius: 4px;
-  opacity: 0.6;
-  cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  margin-right: 6px;
+/*========================*/
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(2,124,130,.65);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    transition:.35s;
 }
 
-.thumbnails .thumb.selected {
-  opacity: 1;
-  transform: scale(1.05);
-  border: 2px solid var(--primary-color);
+.tarjeta-proyecto:hover .overlay{
+    opacity:1;
 }
 
-.thumbnails .thumb:hover {
-  opacity: 1;
+.overlay span{
+    color:white;
+    font-size:1.2rem;
+    font-weight:bold;
+    letter-spacing:.5px;
 }
 
-.galeria-previa-grande {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 1.5rem 0;
+/*========================*/
+
+.contenido{
+    padding:28px;
 }
 
-.galeria-previa-grande img {
-  width: 280px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+.contenido h2{
+    color:#1c1c1c;
+    margin-bottom:12px;
+    font-size:1.5rem;
 }
 
-.galeria-previa-grande img:hover {
-  transform: scale(1.03);
+.contenido p{
+    color:#666;
+    line-height:1.7;
 }
 
-.btn-ver-mas {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
+/*========================*/
 
-.btn-ver-mas:hover {
-  background-color: #025c60;
-  cursor: pointer;
-}
+@media(max-width:768px){
+    .contenedor-proyectos{
+        grid-template-columns:1fr;
+    }
 
-@media (max-width: 768px) {
-  .gallery-viewer {
-    max-width: 100%;
-    margin: 1rem 0;
-  }
+    .hero-proyectos h1{
+        font-size:2.3rem;
+    }
 
-  .gallery-arrow {
-    font-size: 1.5rem;
-    padding: 0.4rem;
-  }
-
-  .thumbnails {
-    gap: 0.3rem;
-  }
-
-  .thumbnails .thumb {
-    width: 50px;
-    height: 35px;
-  }
-
-  .galeria-previa-grande img {
-    width: 100%;
-    height: auto;
-  }
 }

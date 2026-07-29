@@ -1,62 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyecto DC - Remodelación de Apartamento | Construcciones HR</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="/css/proyectos-galerias.css" />
-  <link rel="stylesheet" href="/css/estilos.css" />
+    <title>Proyecto DC - Remodelación de Apartamento | Construcciones HR</title>
 
-  <script defer src="/js/script.js"></script>
-  <script>
-      const GALERIA = {
-          basePath: "/img/proyecto-dc",
-          extension: "webp",
-          etapas: {
-              remodelacion: 12
-          }
-      };
-  </script>
-  <script defer src="/js/galerias.js"></script>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/proyectos-galerias.css">
+
+    <script defer src="/js/script.js"></script>
+
+    <script>
+        const GALERIA = {
+            basePath: "/img/proyecto-dc",
+            extension: "webp",
+            etapas: {
+                remodelacion: 12
+            }
+        };
+    </script>
+
+    <script defer src="/js/galerias.js"></script>
+
 </head>
 
 <body>
-  
-  <header class="main-header">
-    <div class="container header-container">
 
-      <button class="navbar-toggle" aria-label="Abrir menú">
-        &#9776;
-      </button>
+    <!-- ================= HEADER ================= -->
 
-      <div class="logo">
-        <img src="/img/Logo_Construcciones_HR.png" alt="Construcciones HR">
-        <span class="brand-name">Construcciones HR</span>
-      </div>
+    <header class="main-header">
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="/sistema/proyectos.html">Proyectos</a></li>
-          <li><a href="/index.html">Inicio</a></li>
-        </ul>
-      </nav>
+        <div class="container header-container">
 
-    </div>
-  </header>
+            <button class="navbar-toggle" aria-label="Abrir menú">
+                &#9776;
+            </button>
 
-  <main class="container container-galeria">
+            <div class="logo">
 
-    <h1 class="page-title">
-      Proyecto DC - Remodelación de Apartamento
-    </h1>
+                <img src="/img/Logo_Construcciones_HR.png" alt="Construcciones HR">
 
-    <section class="galeria-etapa">
-      <div class="gallery-viewer" data-gallery="remodelacion"></div>
-      <div class="thumbnails" data-gallery="remodelacion"></div>
-    </section>
+                <span class="brand-name">
+                    Construcciones HR
+                </span>
 
-  </main>
+            </div>
+
+            <nav class="navbar">
+
+                <ul>
+
+                    <li>
+                        <a href="/sistema/proyectos.html">
+                            Proyectos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- ================= CONTENIDO ================= -->
+
+    <main class="container container-galeria">
+
+        <!-- Título -->
+
+        <section class="encabezado-proyecto">
+            <h1 class="page-title">
+                Proyecto DC
+            </h1>
+
+            <p class="subtitulo-proyecto">
+                Remodelación Integral de Apartamento
+            </p>
+        </section>
+
+        <!-- Descripción -->
+
+        <section class="descripcion-proyecto">
+
+            <div class="descripcion-card">
+
+                <h2>
+                    🏗️ Descripción del proyecto
+                </h2>
+
+                <p>
+                    Este proyecto consistió en la remodelación integral de un apartamento,
+                    transformando sus espacios mediante un diseño moderno, materiales de alta
+                    calidad y soluciones que mejoran la funcionalidad y el confort del hogar.
+                </p>
+
+                <p>
+                    Durante la ejecución de la obra se realizaron las siguientes actividades:
+                </p>
+
+                <ul class="lista-trabajos">
+                    <li>✔ Carpintería personalizada.</li>
+                    <li>✔ Remodelación de habitaciones.</li>
+                    <li>✔ Instalación de iluminación LED.</li>
+                    <li>✔ Adecuación de redes eléctricas.</li>
+                    <li>✔ Pintura general.</li>
+                    <li>✔ Acabados interiores.</li>
+                    <li>✔ Fabricación e instalación de closets y mobiliario.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- Galería -->
+
+        <section class="galeria-proyecto">
+
+            <h2 class="titulo-galeria">
+
+                📸 Galería del proyecto
+
+            </h2>
+
+            <div class="galeria-etapa">
+
+                <div class="gallery-viewer"
+                    data-gallery="remodelacion">
+                </div>
+
+                <div class="thumbnails"
+                    data-gallery="remodelacion">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
+
 </html>

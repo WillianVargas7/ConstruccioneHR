@@ -1,73 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyecto Casa La Calera - Construcciones HR</title>
-  <link rel="stylesheet" href="/css/proyectos-galerias.css" />
-  <link rel="stylesheet" href="/css/estilos.css" />
-  <script defer src="/js/script.js"></script>
-  <script>
-  const GALERIA = {
-      basePath: "/img/calera",
-      extension: "jpg",
-      etapas: {
-          tejado: 74,
-          pintura: 19,
-          chimeneas: 4
-      }
-  };
-  </script>
-  <script defer src="/js/galerias.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Casa La Calera | Construcciones HR</title>
+
+<link rel="stylesheet" href="/css/estilos.css">
+<link rel="stylesheet" href="/css/proyectos-galerias.css">
+
+<script defer src="/js/script.js"></script>
+
+<script>
+const GALERIA={
+    basePath:"/img/calera",
+    extension:"jpg",
+    etapas:{
+        tejado:74,
+        pintura:19,
+        chimeneas:4
+    }
+};
+</script>
+
+<script defer src="/js/galerias.js"></script>
 </head>
 
 <body>
-  <header class="main-header">
 
+<header class="main-header">
     <div class="container header-container">
 
-      <button class="navbar-toggle" aria-label="Abrir menú">
-        &#9776;
-      </button>
+        <button class="navbar-toggle" aria-label="Abrir menú">&#9776;</button>
 
-      <div class="logo">
-        <img src="/img/Logo_Construcciones_HR.png" alt="Construcciones HR" />
-        <span class="brand-name">Construcciones HR</span>
-      </div>
+        <div class="logo">
+            <img src="/img/Logo_Construcciones_HR.png" alt="Construcciones HR">
+            <span class="brand-name">Construcciones HR</span>
+        </div>
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="/sistema/proyectos.html">Proyectos</a></li>
-          <li><a href="/index.html">Inicio</a></li>
-        </ul>
-      </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/sistema/proyectos.html">Proyectos</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+            </ul>
+        </nav>
 
     </div>
-  </header>
+</header>
 
-  <main class="container container-galeria">
-    <h1 class="page-title">Proyecto casa La Calera</h1>
+<main class="container container-galeria">
 
-    <!-- Secciones dinámicas por etapa serán insertadas aquí por JS -->
+    <!--========== ENCABEZADO ==========-->
 
-    <section class="galeria-etapa">
-      <h2>Cambio De Tejados y Refuerzo De Estructura</h2>
-      <div class="gallery-viewer" data-gallery="tejado"></div>
-      <div class="thumbnails" data-gallery="tejado"></div>
+    <section class="encabezado-proyecto">
+        <h1 class="page-title">Proyecto Casa La Calera</h1>
+        <p class="subtitulo-proyecto">Remodelación y Mantenimiento de Vivienda Campestre</p>
     </section>
 
-    <section class="galeria-etapa">
-      <h2>Mantenimiento Pintura Madera</h2>
-      <div class="gallery-viewer" data-gallery="pintura"></div>
-      <div class="thumbnails" data-gallery="pintura"></div>
+    <!--========== DESCRIPCIÓN ==========-->
+
+    <section class="descripcion-proyecto">
+      <div class="descripcion-card">
+
+        <h2>Descripción del proyecto</h2>
+
+        <p>
+            El proyecto <strong>Casa La Calera</strong> consistió en una intervención arquitectónica parcial orientada al reforzamiento estructural y al mantenimiento integral de una vivienda campestre de estilo colonial. El objetivo principal fue mejorar la estabilidad de la edificación, preservar sus características arquitectónicas y prolongar la vida útil de sus elementos constructivos, manteniendo la identidad y el valor estético propios de la vivienda.
+        </p>
+
+        <p>
+            La intervención incluyó trabajos especializados de reforzamiento estructural, restauración de elementos en madera, remodelación de chimeneas y adecuaciones complementarias, ejecutados bajo altos estándares de calidad para garantizar la seguridad, funcionalidad y conservación de la construcción.
+        </p>
+
+        <p>Durante la ejecución del proyecto se realizaron las siguientes actividades:</p>
+
+        <ul class="lista-trabajos">
+            <li>Refuerzo estructural de la vivienda mediante sistema de guayas y templetes.</li>
+            <li>Desmonte temporal y reinstalación de listones de madera para la ejecución del refuerzo.</li>
+            <li>Reforzamiento de la estructura de cubierta y elementos portantes.</li>
+            <li>Mantenimiento preventivo y correctivo de estructuras en madera.</li>
+            <li>Lijado, restauración y pintura de puertas, ventanas, rejas y acabados en madera.</li>
+            <li>Remodelación de chimeneas con estructuras en concreto reforzado.</li>
+            <li>Revestimiento en madera de las nuevas chimeneas respetando el diseño colonial.</li>
+            <li>Mantenimiento de flautas de las chimeneas.</li>
+            <li>Adecuación y mantenimiento de puntos de gas.</li>
+            <li>Limpieza general, revisión final y entrega de la obra.</li>
+        </ul>
+
+      </div>
     </section>
 
-    <section class="galeria-etapa">
-      <h2>Modificación De chimeneas</h2>
-      <div class="gallery-viewer" data-gallery="chimeneas"></div>
-      <div class="thumbnails" data-gallery="chimeneas"></div>
+    <!--========== CAMBIO DE TEJADO ==========-->
+
+    <section class="galeria-proyecto">
+        <h2 class="titulo-galeria">Cambio de Tejado y Refuerzo Estructural</h2>
+        <div class="galeria-etapa">
+            <div class="gallery-viewer" data-gallery="tejado"></div>
+            <div class="thumbnails" data-gallery="tejado"></div>
+        </div>
     </section>
 
-  </main>
+    <!--========== MANTENIMIENTO DE MADERA ==========-->
+
+    <section class="galeria-proyecto">
+        <h2 class="titulo-galeria">Mantenimiento y Pintura de Madera</h2>
+        <div class="galeria-etapa">
+            <div class="gallery-viewer" data-gallery="pintura"></div>
+            <div class="thumbnails" data-gallery="pintura"></div>
+        </div>
+    </section>
+
+    <!--========== CHIMENEAS ==========-->
+
+    <section class="galeria-proyecto">
+        <h2 class="titulo-galeria">Modificación de Chimeneas</h2>
+        <div class="galeria-etapa">
+            <div class="gallery-viewer" data-gallery="chimeneas"></div>
+            <div class="thumbnails" data-gallery="chimeneas"></div>
+        </div>
+    </section>
+
+</main>
+
 </body>
 </html>

@@ -1,78 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyecto El Chocolatero - Construcciones HR</title>
-  <link rel="stylesheet" href="/css/proyectos-galerias.css" />
-  <link rel="stylesheet" href="/css/estilos.css" />
-  <script defer src="/js/script.js"></script>
-  <script>
-    const GALERIA = {
-        basePath: "/img/chocolatero",
-        extension: "jpg",
-        etapas: {
-            estructura: 28,
-            obra: 39,
-            acabados: 21,
-            entrega: 2
-        }
-    };
-  </script>
-  <script defer src="/js/galerias.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto El Chocolatero | Construcciones HR</title>
+
+<link rel="stylesheet" href="/css/estilos.css">
+<link rel="stylesheet" href="/css/proyectos-galerias.css">
+
+<script defer src="/js/script.js"></script>
+
+<script>
+const GALERIA={
+    basePath:"/img/chocolatero",
+    extension:"jpg",
+    etapas:{
+        estructura:28,
+        obra:39,
+        acabados:21,
+        entrega:2
+    }
+};
+</script>
+
+<script defer src="/js/galerias.js"></script>
 </head>
 
 <body>
 
-  <header class="main-header">
+<header class="main-header">
     <div class="container header-container">
 
-      <button class="navbar-toggle" aria-label="Abrir menú">
-        &#9776;
-      </button>
+        <button class="navbar-toggle" aria-label="Abrir menú">&#9776;</button>
 
-      <div class="logo">
-        <img src="/img/Logo_Construcciones_HR.png" alt="Construcciones HR" />
-        <span class="brand-name">Construcciones HR</span>
-      </div>
+        <div class="logo">
+            <img src="/img/Logo_Construcciones_HR.png" alt="Construcciones HR">
+            <span class="brand-name">Construcciones HR</span>
+        </div>
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="/sistema/proyectos.html">Proyectos</a></li>
-          <li><a href="/index.html">Inicio</a></li>
-        </ul>
-      </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/sistema/proyectos.html">Proyectos</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+            </ul>
+        </nav>
 
     </div>
-  </header>
+</header>
 
-  <main class="container container-galeria">
-    <h1 class="page-title">Proyecto El Chocolatero</h1>
+<main class="container container-galeria">
 
-    <section class="galeria-etapa">
-      <h2>Estructura</h2>
-      <div class="gallery-viewer" data-gallery="estructura"></div>
-      <div class="thumbnails" data-gallery="estructura"></div>
+    <!--========== ENCABEZADO ==========-->
+
+    <section class="encabezado-proyecto">
+        <h1 class="page-title">Proyecto El Chocolatero</h1>
+        <p class="subtitulo-proyecto">Construcción de Vivienda Campestre</p>
     </section>
 
-    <section class="galeria-etapa">
-      <h2>Obra Gris</h2>
-      <div class="gallery-viewer" data-gallery="obra"></div>
-      <div class="thumbnails" data-gallery="obra"></div>
+    <!--========== DESCRIPCIÓN ==========-->
+
+    <section class="descripcion-proyecto">
+        <div class="descripcion-card">
+
+            <h2>Descripción del proyecto</h2>
+
+            <p>
+                El proyecto <strong>El Chocolatero</strong> consistió en la construcción de una vivienda campestre desarrollada desde su etapa estructural hasta la entrega final. La obra fue ejecutada siguiendo altos estándares de calidad, garantizando una estructura sólida, espacios funcionales y acabados que brindan confort, durabilidad y una estética moderna acorde con las necesidades del cliente.
+            </p>
+
+            <p>Durante la ejecución del proyecto se desarrollaron las siguientes actividades:</p>
+
+            <ul class="lista-trabajos">
+                <li>Ejecución de cimentaciones y estructura en concreto reforzado.</li>
+                <li>Construcción de columnas, vigas, placas y elementos estructurales.</li>
+                <li>Levantamiento de muros y desarrollo de la obra gris.</li>
+                <li>Instalación de redes hidráulicas, sanitarias y eléctricas.</li>
+                <li>Construcción e instalación de cubierta.</li>
+                <li>Instalación de pisos, enchapes y revestimientos.</li>
+                <li>Fabricación e instalación de carpintería en madera y aluminio.</li>
+                <li>Pintura, acabados arquitectónicos y detalles finales.</li>
+                <li>Instalación de puertas, ventanas, closets y mobiliario.</li>
+                <li>Limpieza general, revisión de acabados y entrega de la vivienda.</li>
+            </ul>
+
+        </div>
     </section>
 
-    <section class="galeria-etapa">
-      <h2>Acabados</h2>
-      <div class="gallery-viewer" data-gallery="acabados"></div>
-      <div class="thumbnails" data-gallery="acabados"></div>
+    <!--========== ESTRUCTURA ==========-->
+
+    <section class="galeria-proyecto">
+        <h2 class="titulo-galeria">Estructura</h2>
+        <div class="galeria-etapa">
+            <div class="gallery-viewer" data-gallery="estructura"></div>
+            <div class="thumbnails" data-gallery="estructura"></div>
+        </div>
     </section>
 
-    <section class="galeria-etapa">
-      <h2>Entrega Final</h2>
-      <div class="gallery-viewer" data-gallery="entrega"></div>
-      <div class="thumbnails" data-gallery="entrega"></div>
+    <!--========== OBRA GRIS ==========-->
+
+    <section class="galeria-proyecto">
+        <h2 class="titulo-galeria">Obra Gris</h2>
+        <div class="galeria-etapa">
+            <div class="gallery-viewer" data-gallery="obra"></div>
+            <div class="thumbnails" data-gallery="obra"></div>
+        </div>
     </section>
-  </main>
+
+    <!--========== ACABADOS ==========-->
+
+    <section class="galeria-proyecto">
+        <h2 class="titulo-galeria">Acabados</h2>
+        <div class="galeria-etapa">
+            <div class="gallery-viewer" data-gallery="acabados"></div>
+            <div class="thumbnails" data-gallery="acabados"></div>
+        </div>
+    </section>
+
+    <!--========== ENTREGA FINAL ==========-->
+
+    <section class="galeria-proyecto">
+        <h2 class="titulo-galeria">Entrega Final</h2>
+        <div class="galeria-etapa">
+            <div class="gallery-viewer" data-gallery="entrega"></div>
+            <div class="thumbnails" data-gallery="entrega"></div>
+        </div>
+    </section>
+
+</main>
+
 </body>
 </html>

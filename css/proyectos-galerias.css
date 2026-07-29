@@ -1,74 +1,159 @@
-/* =====================================================
-   CONTENEDOR GALERÍA (AISLADO)
-===================================================== */
-.container-galeria {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem;
+/*=====================================================
+  CONTENEDOR GENERAL
+=====================================================*/
+.container-galeria{
+    max-width:1100px;
+    margin:0 auto;
+    padding:2rem;
 }
 
-/* =====================================================
-   TÍTULO DE PÁGINA
-===================================================== */
-.page-title {
-  text-align: center;
-  font-size: 3rem;
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-  margin-top: 120px;
+/*=====================================================
+  ENCABEZADO DEL PROYECTO
+=====================================================*/
+.encabezado-proyecto{
+    margin:120px 0 40px;
+    text-align:center;
 }
 
-/* =====================================================
-   SECCIÓN POR ETAPA
-===================================================== */
-.galeria-etapa {
-  margin-bottom: 3rem;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.page-title{
+    font-size:3rem;
+    color:#fff;
+    text-shadow:2px 2px 6px rgba(0,0,0,.6);
+    margin-bottom:.5rem;
 }
 
-.galeria-etapa h2 {
-  text-align: center;
-  color: #222;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+.subtitulo-proyecto{
+    color:#e8e8e8;
+    font-size:1.15rem;
+    font-weight:400;
+    letter-spacing:.5px;
 }
 
-/* =====================================================
-   VISOR DE IMAGEN PRINCIPAL
-===================================================== */
-.gallery-viewer {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 1rem auto;
-  overflow: hidden;
-  border-radius: 10px;
-  background-color: #f5f5f5;
+/*=====================================================
+  DESCRIPCIÓN DEL PROYECTO
+=====================================================*/
+.descripcion-proyecto{
+    margin-bottom:40px;
 }
 
-.gallery-current {
-  width: 100%;
-  height: 550px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  border-radius: 12px;
-  background-color: #f5f5f5;
-  transition:opacity .25s ease;
+.descripcion-card{
+    background:#fff;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
+.descripcion-card h2{
+    color:var(--primary,#027C82);
+    font-size:1.8rem;
+    margin-bottom:20px;
+    padding-bottom:12px;
+    border-bottom:3px solid #027C82;
+}
+
+.descripcion-card p{
+    color:#555;
+    font-size:1.05rem;
+    line-height:1.9;
+    margin-bottom:18px;
+    text-align:justify;
+}
+
+.lista-trabajos{
+    margin-top:20px;
+    padding-left:0;
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px 28px;
+}
+
+.lista-trabajos li{
+    display:flex;
+    align-items:center;
+    color:#444;
+    font-size:1rem;
+    font-weight:500;
+}
+
+.lista-trabajos li::before{
+    content:"✔";
+    color:#027C82;
+    font-weight:bold;
+    margin-right:10px;
+    font-size:1rem;
+}
+
+/*=====================================================
+  GALERÍA
+=====================================================*/
+.galeria-proyecto{
+    margin-bottom:60px;
+}
+
+.titulo-galeria{
+    color:#fff;
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:25px;
+    position:relative;
+}
+
+.titulo-galeria::after{
+    content:"";
+    width:90px;
+    height:4px;
+    background:#027C82;
+    display:block;
+    margin:12px auto 0;
+    border-radius:10px;
+}
+
+/*=====================================================
+  CONTENEDOR DE GALERÍA
+=====================================================*/
+.galeria-etapa{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/*=====================================================
+  VISOR PRINCIPAL
+=====================================================*/
+.gallery-viewer{
+    position:relative;
+    width:100%;
+    max-width:850px;
+    margin:0 auto;
+    overflow:hidden;
+    border-radius:14px;
+    background:#f5f5f5;
+}
+
+.gallery-current{
+    width:100%;
+    height:560px;
+    display:block;
+    object-fit:contain;
+    object-position:center;
+    background:#f5f5f5;
+    transition:opacity .25s ease;
+}
+
+/*=====================================================
+  CONTADOR
+=====================================================*/
 .gallery-counter{
     position:absolute;
-    bottom:15px;
     left:50%;
+    bottom:18px;
     transform:translateX(-50%);
-    background:rgba(0,0,0,.65);
+    background:rgba(0,0,0,.7);
     color:#fff;
-    padding:6px 14px;
-    border-radius:20px;
+    padding:6px 16px;
+    border-radius:30px;
     font-size:.9rem;
     font-weight:600;
     backdrop-filter:blur(4px);
@@ -76,101 +161,82 @@
     user-select:none;
 }
 
-/* =====================================================
-   FLECHAS DE NAVEGACIÓN
-===================================================== */
-.gallery-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  transition: background-color 0.3s ease;
-}
-
-.gallery-arrow:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.gallery-arrow.prev {
-  left: 10px;
-}
-
-.gallery-arrow.next {
-  right: 10px;
-}
-
-/* ===============================
-   INDICADOR DE IMAGEN
-================================== */
-
-.gallery-counter{
+/*=====================================================
+  FLECHAS
+=====================================================*/
+.gallery-arrow{
     position:absolute;
-    bottom:15px;
-    left:50%;
-    transform:translateX(-50%);
-    background:rgba(0,0,0,.65);
+    top:50%;
+    transform:translateY(-50%);
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
     color:#fff;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:.9rem;
-    font-weight:600;
-    backdrop-filter:blur(4px);
-    z-index:20;
-    user-select:none;
+    font-size:2rem;
+    cursor:pointer;
+    transition:.25s;
+    z-index:15;
 }
 
-/* =====================================================
-   MINIATURAS
-===================================================== */
-.thumbnails {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  overflow-x: auto;
-  padding-bottom: 0.5rem;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+.gallery-arrow:hover{
+    background:#027C82;
 }
 
-.thumb {
-  flex: 0 0 auto;
-  width: 90px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 6px;
-  opacity: 0.6;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.gallery-arrow.prev{
+    left:15px;
 }
 
-.thumb.selected,
-.thumb:hover {
-  opacity: 1;
-  transform: scale(1.05);
-  border: 2px solid #0e7e8a;
+.gallery-arrow.next{
+    right:15px;
 }
 
-/* ==========================================
-   LIGHTBOX
-========================================== */
+/*=====================================================
+  MINIATURAS
+=====================================================*/
+.thumbnails{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    overflow-x:auto;
+    padding-bottom:8px;
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+}
 
+.thumb{
+    flex:0 0 auto;
+    width:95px;
+    height:65px;
+    object-fit:cover;
+    border-radius:8px;
+    cursor:pointer;
+    opacity:.65;
+    transition:.25s;
+    border:2px solid transparent;
+}
+
+.thumb:hover,
+.thumb.selected{
+    opacity:1;
+    transform:scale(1.05);
+    border-color:#027C82;
+}
+
+/*=====================================================
+  LIGHTBOX
+=====================================================*/
 .lightbox{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.95);
     display:flex;
     justify-content:center;
     align-items:center;
+    background:rgba(0,0,0,.95);
     opacity:0;
     visibility:hidden;
-    transition:.3s;
+    transition:.3s ease;
     z-index:99999;
 }
 
@@ -182,127 +248,259 @@
 .lightbox img{
     max-width:92%;
     max-height:88vh;
-    border-radius:10px;
     object-fit:contain;
-    box-shadow:0 0 30px rgba(0,0,0,.5);
+    border-radius:12px;
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
     animation:zoom .25s ease;
 }
 
 @keyframes zoom{
-
-    from{
-        transform:scale(.9);
-        opacity:0;
-    }
-
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
-
+    from{transform:scale(.92);opacity:0;}
+    to{transform:scale(1);opacity:1;}
 }
 
+/*=====================================================
+  BOTÓN CERRAR
+=====================================================*/
 .lightbox-close{
-
     position:absolute;
     top:20px;
     right:30px;
-
-    font-size:42px;
-
-    color:white;
-
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    font-size:2rem;
     cursor:pointer;
-
+    transition:.25s;
     user-select:none;
-
 }
 
+.lightbox-close:hover{
+    background:#027C82;
+    transform:rotate(90deg);
+}
+
+/*=====================================================
+  FLECHAS LIGHTBOX
+=====================================================*/
 .lightbox-arrow{
-
     position:absolute;
-
     top:50%;
-
     transform:translateY(-50%);
-
-    font-size:55px;
-
-    color:white;
-
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    font-size:2rem;
     cursor:pointer;
-
+    transition:.25s;
     user-select:none;
+}
 
-    padding:15px;
-
+.lightbox-arrow:hover{
+    background:#027C82;
 }
 
 .lightbox-prev{
-
-    left:25px;
-
+    left:30px;
 }
 
 .lightbox-next{
-
-    right:25px;
-
+    right:30px;
 }
 
+/*=====================================================
+  CONTADOR LIGHTBOX
+=====================================================*/
 .lightbox-counter{
-
     position:absolute;
-
-    bottom:25px;
-
     left:50%;
-
+    bottom:25px;
     transform:translateX(-50%);
-
-    color:white;
-
-    font-size:18px;
-
+    padding:8px 18px;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(6px);
+    color:#fff;
+    font-size:1rem;
     font-weight:600;
+    letter-spacing:.5px;
+}
+
+/*=====================================================
+  SCROLL MINIATURAS
+=====================================================*/
+.thumbnails::-webkit-scrollbar{
+    height:8px;
+}
+
+.thumbnails::-webkit-scrollbar-track{
+    background:#ececec;
+    border-radius:20px;
+}
+
+.thumbnails::-webkit-scrollbar-thumb{
+    background:#027C82;
+    border-radius:20px;
+}
+
+.thumbnails::-webkit-scrollbar-thumb:hover{
+    background:#015f64;
+}
+
+/*=====================================================
+  RESPONSIVE TABLET
+=====================================================*/
+@media(max-width:1024px){
+
+    .page-title{
+        font-size:2.5rem;
+    }
+
+    .gallery-current{
+        height:470px;
+    }
+
+    .descripcion-card{
+        padding:32px;
+    }
+
+    .lista-trabajos{
+        grid-template-columns:1fr;
+    }
 
 }
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-@media (max-width: 1024px) {
-  .gallery-current {
-    height: 450px;
-  }
+/*=====================================================
+  RESPONSIVE MÓVIL
+=====================================================*/
+@media(max-width:768px){
+
+    .container-galeria{
+        padding:1rem;
+    }
+
+    .encabezado-proyecto{
+        margin:100px 0 30px;
+    }
+
+    .page-title{
+        font-size:2rem;
+    }
+
+    .subtitulo-proyecto{
+        font-size:1rem;
+    }
+
+    .descripcion-card{
+        padding:24px;
+    }
+
+    .descripcion-card h2{
+        font-size:1.45rem;
+    }
+
+    .descripcion-card p{
+        font-size:.98rem;
+        text-align:left;
+    }
+
+    .lista-trabajos{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .titulo-galeria{
+        font-size:1.6rem;
+    }
+
+    .galeria-etapa{
+        padding:18px;
+    }
+
+    .gallery-current{
+        height:300px;
+    }
+
+    .gallery-arrow{
+        width:42px;
+        height:42px;
+        font-size:1.5rem;
+    }
+
+    .thumb{
+        width:70px;
+        height:50px;
+    }
+
+    .lightbox-close{
+        top:15px;
+        right:15px;
+        width:42px;
+        height:42px;
+        font-size:1.7rem;
+    }
+
+    .lightbox-arrow{
+        width:45px;
+        height:45px;
+        font-size:1.5rem;
+    }
+
+    .lightbox-prev{
+        left:10px;
+    }
+
+    .lightbox-next{
+        right:10px;
+    }
+
 }
 
-@media (max-width: 768px) {
+/*=====================================================
+  RESPONSIVE MÓVILES PEQUEÑOS
+=====================================================*/
+@media(max-width:480px){
 
-  .container-galeria {
-    padding: 1rem;
-  }
+    .page-title{
+        font-size:1.7rem;
+    }
 
-  .page-title {
-    font-size: 2rem;
-    margin-top: 100px;
-  }
+    .subtitulo-proyecto{
+        font-size:.95rem;
+    }
 
-  .gallery-current {
-    height: 300px;
-  }
+    .descripcion-card{
+        padding:20px;
+        border-radius:14px;
+    }
 
-  .gallery-arrow {
-    font-size: 1.5rem;
-    padding: 0.4rem;
-  }
+    .descripcion-card h2{
+        font-size:1.3rem;
+    }
 
-  .thumb {
-    width: 60px;
-    height: 45px;
-  }
+    .gallery-current{
+        height:240px;
+    }
 
-  .thumbnails {
-    gap: 0.4rem;
-  }
+    .thumb{
+        width:60px;
+        height:45px;
+    }
+
+    .gallery-counter,
+    .lightbox-counter{
+        font-size:.8rem;
+        padding:6px 14px;
+    }
+
 }
